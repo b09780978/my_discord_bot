@@ -34,8 +34,6 @@ module.exports = class PixivCommand extends Commando.Command {
         let params;
         let option;
         let response;
-        let date;
-        let mode;
 
         switch (type) {
             // hot tags
@@ -89,20 +87,16 @@ module.exports = class PixivCommand extends Commando.Command {
 
                 // Get rank page
             case 'rank':
-                date = new Date();
-                date = `${date.getFullYear()}-${date.getMonth()+1<10 ? '0'+(date.getMonth()+1) : date.getMonth()}-${date.getDate()<10 ? '0'+date.getDate() : date.getDate() }\n`;
                 params = {
                     type: 'rank',
                     mode: 'male',
-                    content: 'illust',
-                    date: date,
                 };
                 option = generate_option('GET', params);
 
                 request(option)
                     .then((json) => {
                         if (json.status != 'success') {
-                            return message.reply('暫時無法查看');
+                            return message.reply(`暫時無法查看: ${date}`);
                         }
                         response = 'rank:\n';
                         for (let i = 0; i < 10; i++) {
