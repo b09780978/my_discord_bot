@@ -38,6 +38,9 @@ bot.registry
     .registerGroups([
 		['wenku8', 'wenku8'],
         ['pixiv', 'pixiv'],
+        ['farm', 'farm'],
+        // TODO
+        ['youtube', 'youtube'],
 	])
     .registerDefaults()
     .registerCommandsIn(path.join(__dirname, DISCORD_COMMAND_DIR));
