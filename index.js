@@ -39,8 +39,9 @@ bot.registry
 		['wenku8', 'wenku8'],
         ['pixiv', 'pixiv'],
         ['farm', 'farm'],
-        // TODO
         ['fgo', 'fgo'],
+        ['comic', 'comic'],
+        // TODO
         ['youtube', 'youtube'],
 	])
     .registerDefaults()
