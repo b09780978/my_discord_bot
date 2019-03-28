@@ -31,3 +31,28 @@ module.exports = class YoutubeCommand extends Commando.Command {
         message.reply('test music command');
     }
 }
+/*
+    	if(message.guild){
+		if(message.content.startsWith('!join')){
+			if(message.member.voiceChannel){
+				message.member.voiceChannel.join()
+						.then( (connection) => {
+							message.reply('Join');
+						})
+						.catch( (error) => {
+							message.reply(error.message);
+						});
+			}
+		}
+
+		if(message.content.startsWith('!play')){
+			let song = message.content.split(' ')[1];
+			const dispatcher = message.guild.voiceConnection.playStream(ytdl(song));
+			dispatcher.on('end', () => {
+				message.reply('end');
+			});
+			dispatcher.on('error', (error) => {
+				message.reply(error.message);
+			})
+		}
+*/

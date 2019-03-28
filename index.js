@@ -40,6 +40,7 @@ bot.registry
         ['pixiv', 'pixiv'],
         ['farm', 'farm'],
         // TODO
+        ['fgo', 'fgo'],
         ['youtube', 'youtube'],
 	])
     .registerDefaults()

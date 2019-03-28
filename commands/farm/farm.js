@@ -18,17 +18,6 @@ module.exports = class FarmCommand extends Commando.Command {
             memberName: 'farm',
             description: 'Command for read 異世界悠閒農家',
             examples: ['fa ', ],
-            /*
-            args: [
-                {
-                    key: 'args',
-                    label: 'farm',
-                    prompt: 'get ptt search 異世界悠閒農家',
-                    type: 'string',
-                    infinite: true,
-				}
-			]
-            ,*/
         });
     }
 
@@ -47,7 +36,7 @@ module.exports = class FarmCommand extends Commando.Command {
                 }
             })
             .then(($) => {
-                let response = 'response data\n';
+                let response = '';
                 let collection = {
                     collection: null,
                     newest: [],
@@ -58,7 +47,6 @@ module.exports = class FarmCommand extends Commando.Command {
 
                     // 找彙整文
                     if (collection['collection'] === null && title.match('Web彙整文') !== null) {
-                        console.log('find 彙整文 ' + title + ' : ' + url);
                         collection['collection'] = {
                             title: title,
                             url: get_ptt_url(url)
@@ -66,7 +54,6 @@ module.exports = class FarmCommand extends Commando.Command {
                     }
                     // 找最新翻譯
                     if (title.match(/#\d{3,}/) !== null) {
-                        console.log('find 翻譯 ' + title + ' : ' + url);
                         collection['newest'].push({
                             title: title,
                             url: get_ptt_url(url)
