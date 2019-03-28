@@ -3,26 +3,26 @@ const request = require('request-promise');
 const cheerio = require('cheerio');
 
 ////////////////////////////////
-//		PTT farm Config		  //
+//		Comic Config		  //
 ////////////////////////////////
 const PTT_FARM_URL = 'https://www.ptt.cc/bbs/C_Chat/search?page=1&q=%E7%95%B0%E4%B8%96%E7%95%8C%E6%82%A0%E9%96%92%E8%BE%B2%E5%AE%B6';
 const PTT_URL = 'https://www.ptt.cc';
 
 
-module.exports = class FarmCommand extends Commando.Command {
+module.exports = class ComicCommand extends Commando.Command {
     constructor(bot) {
         super(bot, {
-            name: 'farm',
-            aliases: ['farm', 'fa'],
-            group: 'farm',
-            memberName: 'farm',
-            description: 'Command for read 異世界悠閒農家',
-            examples: ['fa ', ],
+            name: 'comic',
+            aliases: ['comic', 'co'],
+            group: 'comic',
+            memberName: 'comic',
+            description: 'Command for get new update comic',
+            examples: ['co ', ],
         });
     }
 
     async run(message, args) {
-        let response = '';
+        let response = 'search ptt\n';
         let title, url;
 
         request({
