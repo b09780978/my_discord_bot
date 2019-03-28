@@ -7,7 +7,7 @@ My discord bot code
 - [x] ptt 異世界悠閒農家 module
 - [x] pixiv module
 - [x] fgo module
-- [ ] comic module
+- [x] comic module
 - [ ] 測試 module
 - [ ] myself bbs module
 - [ ] 使用Dockerfile部署
