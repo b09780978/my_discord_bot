@@ -9,6 +9,6 @@ My discord bot code
 - [x] fgo module
 - [x] comic module
 - [ ] 測試 module
-- [ ] myself bbs module
+- [x] myself bbs module
 - [x] 使用Dockerfile部署
 - [ ] 完成使用文件

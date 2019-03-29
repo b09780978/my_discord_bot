@@ -1,10 +1,6 @@
 const Commando = require('discord.js-commando');
 const path = require('path');
 
-/////////////////////////////////////////
-//		Need put at setting.json ///////
-///////////////////////////////////////
-
 /////////////////////////////////
 //     Discord Bot             //
 ////////////////////////////////
@@ -41,6 +37,7 @@ bot.registry
         ['farm', 'farm'],
         ['fgo', 'fgo'],
         ['comic', 'comic'],
+        ['myself', 'myself'],
         // TODO
         ['youtube', 'youtube'],
 	])
