@@ -72,7 +72,7 @@ async function get_japan_url() {
     }).then(($) => {
         $('.b-list__main__title').each((index, element) => {
             if (index < 5) {
-                response += get_baha_url($(element).attr('href')) + '\n';
+                response += $(element).text() + ' : ' + get_baha_url($(element).attr('href')) + '\n';
             }
         })
         response += 'FGO wiki : https://appmedia.jp/fategrandorder\n';
@@ -100,8 +100,7 @@ async function get_taiwan_url() {
     }).then(($) => {
         $('.b-list__main__title').each((index, element) => {
             if (index < 5) {
-                //response += $(element).text() + ' : ' + get_baha_url($(element).attr('href')) + '\n';
-                response += get_baha_url($(element).attr('href')) + '\n';
+                response += $(element).text() + ' : ' + get_baha_url($(element).attr('href')) + '\n';
             }
         })
         response += '茹西嫁王 : https://kazemai.github.io/fgo-vz/';
