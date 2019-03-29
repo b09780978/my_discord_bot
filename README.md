@@ -10,5 +10,5 @@ My discord bot code
 - [x] comic module
 - [ ] 測試 module
 - [ ] myself bbs module
-- [ ] 使用Dockerfile部署
+- [x] 使用Dockerfile部署
 - [ ] 完成使用文件
