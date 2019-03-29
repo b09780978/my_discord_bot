@@ -40,6 +40,10 @@ module.exports = class ComicCommand extends Commando.Command {
             case 'NEW':
             case 'n':
             case 'N':
+            case 'update':
+            case 'UPDATE':
+            case 'u':
+            case 'U':
                 response = await get_update_comics();
                 break;
 
